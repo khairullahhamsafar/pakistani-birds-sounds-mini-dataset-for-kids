@@ -1,4 +1,4 @@
-# Pakistani Birds Sounds Classification Mini Dataset for Kids
+# Bird Sounds Classification Mini Dataset for Kids
 
 A small, kid-friendly bird sounds dataset designed for teaching machine learning, artificial intelligence, and audio classification concepts to children and beginners.
 
@@ -7,21 +7,36 @@ This dataset helps students learn how AI can recognize patterns in audio recordi
 ## 📁 Dataset Structure
 
 ```text
-Pakistani_Birds_Sounds_Classification_Mini_Dataset_For_Kids/
-├── Buff_Browed_Chachalaca/          # 10 audio samples
-├── Lesser_Nothura/                  # 10 audio samples
-├── Puna_Tinamou/                    # 10 audio samples
-├── Quebracho_Crested_Tinamou/       # 10 audio samples
-└── White_Crested_Guan/              # 10 audio samples
+Bird_Sounds_Classification_Mini_Dataset_For_Kids/
+├── Buff_Browed_Chachalaca/          # 10 training audio samples
+├── Lesser_Nothura/                  # 10 training audio samples
+├── Puna_Tinamou/                    # 10 training audio samples
+├── Quebracho_Crested_Tinamou/       # 10 training audio samples
+└── White_Crested_Guan/              # 10 training audio samples
+
+Test_Set/
+├── Puna Tinamou12.mp3
+├── Puna Tinamou13.mp3
+├── White-crested Guan12.mp3
+└── White-crested Guan13.mp3
 ```
 
-### Classes
+### Training Classes
 
 - `Buff_Browed_Chachalaca`
 - `Lesser_Nothura`
 - `Puna_Tinamou`
 - `Quebracho_Crested_Tinamou`
 - `White_Crested_Guan`
+
+### Test Set
+
+The `Test_Set` directory contains:
+
+- 2 unseen audio samples of **Puna_Tinamou**
+- 2 unseen audio samples of **White_Crested_Guan**
+
+These recordings can be used to evaluate a trained model's prediction performance on new, unseen bird sounds.
 
 ## 🎯 Purpose
 
@@ -31,17 +46,19 @@ This dataset is perfect for:
 - Introduction to audio classification
 - Bird species recognition projects
 - Learning about sound pattern recognition
-- Artificial intelligence and computer vision education
-- STEM and AI classroom activities
-- Exploring wildlife conservation through AI
+- Artificial intelligence education
+- STEM classroom activities
+- Exploring wildlife and biodiversity using AI
 
 ## 📊 Details
 
 | Attribute | Value |
 |-----------|---------|
 | Classes | 5 bird species |
-| Audio samples per class | 10 |
-| Total audio samples | 50 |
+| Training audio samples per class | 10 |
+| Total training audio samples | 50 |
+| Testing audio samples | 4 |
+| Total audio samples | 54 |
 | Dataset size | Mini/small |
 | Source | Selected from a larger publicly available bird sounds dataset |
 
@@ -49,41 +66,43 @@ This dataset is perfect for:
 
 Using this dataset, students can:
 
-1. Train a simple audio classification model
-2. Learn how AI recognizes sound patterns
-3. Understand supervised machine learning
-4. Explore biodiversity using artificial intelligence
-5. Learn the difference between image and audio classification
-6. Build beginner-friendly wildlife AI applications
+1. Train a simple audio classification model.
+2. Learn how AI recognizes sound patterns.
+3. Understand supervised machine learning.
+4. Explore biodiversity using artificial intelligence.
+5. Test model performance using unseen bird sounds.
+6. Compare predictions with the correct species labels.
 
 ## 🚀 Quick Start
 
 ```python
 from pathlib import Path
 
-dataset_dir = Path("Pakistani_Birds_Sounds_Classification_Mini_Dataset_For_Kids")
+train_dir = Path("Bird_Sounds_Classification_Mini_Dataset_For_Kids")
+test_dir = Path("Test_Set")
 
-for class_dir in dataset_dir.iterdir():
+print("Training Dataset")
+for class_dir in train_dir.iterdir():
     if class_dir.is_dir():
-        print(
-            f"{class_dir.name}: "
-            f"{len(list(class_dir.glob('*')))} audio files"
-        )
+        print(f"{class_dir.name}: {len(list(class_dir.glob('*')))} audio files")
+
+print(f"\nTest samples: {len(list(test_dir.glob('*')))} audio files")
 ```
 
 ## 🎧 Suggested Classroom Activity
 
-1. Train an audio classification model using the bird sound recordings.
-2. Test the model with unseen bird sounds.
-3. Compare predictions with the correct bird species.
-4. Discuss how AI distinguishes one bird species from another using sound patterns.
+1. Train an audio classification model using the training dataset.
+2. Play each recording from the `Test_Set`.
+3. Let the AI predict the bird species.
+4. Compare the predictions with the correct answers.
+5. Discuss how AI identifies different birds using only their sounds.
 
 Questions for students:
 
-- How are bird sounds different from one another?
-- Why can computers learn to recognize bird calls?
-- What challenges might occur if two bird species sound similar?
-- How could collecting more audio samples improve the model?
+- How are bird calls different from one another?
+- Which bird species was easiest for the AI to recognize?
+- Why do we use separate training and testing datasets?
+- How would adding more recordings improve the model?
 
 ## ⚠️ Notes
 
@@ -103,7 +122,7 @@ The audio recordings in this mini dataset were selected from a larger publicly a
 
 ## 🔍 Keywords
 
-Machine Learning for Kids, AI for Kids, Audio Classification, Bird Sound Classification, Bird Call Recognition, Bioacoustics, Wildlife AI, Nature Sounds Dataset, Sound Recognition, Audio Pattern Recognition, Educational Dataset, Beginner Machine Learning Dataset, Artificial Intelligence Education, STEM Education, Supervised Learning, Audio Machine Learning, Mini Dataset, Small Dataset, Bird Species Classification, Environmental AI
+Machine Learning for Kids, AI for Kids, Audio Classification, Bird Sound Classification, Bird Call Recognition, Bird Species Identification, Wildlife AI, Bioacoustics, Nature Sounds Dataset, Sound Recognition, Audio Pattern Recognition, Educational Dataset, Beginner Machine Learning Dataset, Artificial Intelligence Education, STEM Education, Supervised Learning, Audio Machine Learning, Mini Dataset, Small Dataset, Bird Audio Dataset
 
 ## 🏷️ Topics
 
@@ -121,4 +140,4 @@ Machine Learning for Kids, AI for Kids, Audio Classification, Bird Sound Classif
 
 Prepared and curated by **Khairullah Hamsafar** for educational and classroom learning purposes.
 
-Focused on making Machine Learning, Artificial Intelligence, Computer Vision, Audio AI, Data Science, and Generative AI accessible to children, students, educators, and beginners.
+Focused on making Machine Learning, Artificial Intelligence, Audio AI, Computer Vision, Data Science, and Generative AI accessible to children, students, educators, and beginners.
