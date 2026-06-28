@@ -7,14 +7,14 @@ This dataset helps students learn how AI can recognize patterns in audio recordi
 ## 📁 Dataset Structure
 
 ```text
-Bird_Sounds_Classification_Mini_Dataset_For_Kids/
+Bird_Sounds_Classification_Mini_Dataset_For_Kids/TRAIN/
 ├── Buff_Browed_Chachalaca/          # 10 training audio samples
 ├── Lesser_Nothura/                  # 10 training audio samples
 ├── Puna_Tinamou/                    # 10 training audio samples
 ├── Quebracho_Crested_Tinamou/       # 10 training audio samples
 └── White_Crested_Guan/              # 10 training audio samples
 
-Test_Set/
+Bird_Sounds_Classification_Mini_Dataset_For_Kids/TEST/
 ├── Puna Tinamou12.mp3
 ├── Puna Tinamou13.mp3
 ├── White-crested Guan12.mp3
